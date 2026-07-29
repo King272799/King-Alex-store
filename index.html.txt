@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>King Alex Store - Top Up Mobile Legends</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col justify-between">
+
+  <!-- Navbar -->
+  <header class="bg-slate-900/80 backdrop-blur border-b border-slate-800 sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="bg-amber-500 text-slate-950 font-black px-3 py-1.5 rounded-lg text-lg flex items-center gap-2 shadow-lg shadow-amber-500/20">
+          <i class="fa-solid font-bold fa-crown"></i>
+        </div>
+        <span class="text-xl font-bold tracking-wide text-white">King Alex <span class="text-amber-400">Store</span></span>
+      </div>
+      <a href="#order-section" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold px-4 py-1.5 rounded-lg text-sm transition">
+        Top Up
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="max-w-4xl mx-auto px-4 mt-6">
+    <div class="bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-700 rounded-2xl p-6 text-slate-950 shadow-xl relative overflow-hidden">
+      <div class="relative z-10">
+        <span class="bg-slate-950/20 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Layanan 24 Jam</span>
+        <h1 class="text-2xl md:text-3xl font-extrabold mt-2">Top Up Diamond MLBB Murah & Cepat</h1>
+        <p class="text-slate-900 text-sm md:text-base mt-1 font-medium">Proses otomatis, aman, dan terpercaya hanya di King Alex Store.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content / Form Topup -->
+  <main id="order-section" class="max-w-4xl mx-auto px-4 my-8 space-y-6">
+
+    <!-- Step 1: Input Account ID -->
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-lg">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-amber-500 text-slate-950 font-bold w-7 h-7 rounded-full flex items-center justify-center text-sm">1</span>
+        <h2 class="text-lg font-bold">Lengkapi Data Akun</h2>
+      </div>
+      <div class="grid grid-cols-3 gap-3">
+        <div class="col-span-2">
+          <label class="block text-xs text-slate-400 mb-1">User ID</label>
+          <input type="number" id="userId" placeholder="Contoh: 12345678" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-amber-400 transition">
+        </div>
+        <div>
+          <label class="block text-xs text-slate-400 mb-1">Zone ID</label>
+          <input type="number" id="zoneId" placeholder="(1234)" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-amber-400 transition">
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2: Pilih Nominal Diamond -->
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-lg">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-amber-500 text-slate-950 font-bold w-7 h-7 rounded-full flex items-center justify-center text-sm">2</span>
+        <h2 class="text-lg font-bold">Pilih Nominal Diamond</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3" id="diamondContainer">
+        <!-- Item Options -->
+        <button onclick="selectItem(this, '86 Diamond', 'Rp 20.000')" class="item-btn bg-slate-800 border border-slate-700 hover:border-amber-400 p-3 rounded-xl text-left transition flex justify-between items-center">
+          <div>
+            <p class="font-semibold text-sm">86 Diamond</p>
+            <p class="text-amber-400 text-xs font-bold mt-1">Rp 20.000</p>
+          </div>
+          <i class="fa-solid fa-gem text-amber-400"></i>
+        </button>
+
+        <button onclick="selectItem(this, '172 Diamond', 'Rp 40.000')" class="item-btn bg-slate-800 border border-slate-700 hover:border-amber-400 p-3 rounded-xl text-left transition flex justify-between items-center">
+          <div>
+            <p class="font-semibold text-sm">172 Diamond</p>
+            <p class="text-amber-400 text-xs font-bold mt-1">Rp 40.000</p>
+          </div>
+          <i class="fa-solid fa-gem text-amber-400"></i>
+        </button>
+
+        <button onclick="selectItem(this, '257 Diamond', 'Rp 60.000')" class="item-btn bg-slate-800 border border-slate-700 hover:border-amber-400 p-3 rounded-xl text-left transition flex justify-between items-center">
+          <div>
+            <p class="font-semibold text-sm">257 Diamond</p>
+            <p class="text-amber-400 text-xs font-bold mt-1">Rp 60.000</p>
+          </div>
+          <i class="fa-solid fa-gem text-amber-400"></i>
+        </button>
+
+        <button onclick="selectItem(this, '344 Diamond', 'Rp 80.000')" class="item-btn bg-slate-800 border border-slate-700 hover:border-amber-400 p-3 rounded-xl text-left transition flex justify-between items-center">
+          <div>
+            <p class="font-semibold text-sm">344 Diamond</p>
+            <p class="text-amber-400 text-xs font-bold mt-1">Rp 80.000</p>
+          </div>
+          <i class="fa-solid fa-gem text-amber-400"></i>
+        </button>
+
+        <button onclick="selectItem(this, '514 Diamond', 'Rp 120.000')" class="item-btn bg-slate-800 border border-slate-700 hover:border-amber-400 p-3 rounded-xl text-left transition flex justify-between items-center">
+          <div>
+            <p class="font-semibold text-sm">514 Diamond</p>
+            <p class="text-amber-400 text-xs font-bold mt-1">Rp 120.000</p>
+          </div>
+          <i class="fa-solid fa-gem text-amber-400"></i>
+        </button>
+
+        <button onclick="selectItem(this, '706 Diamond', 'Rp 160.000')" class="item-btn bg-slate-800 border border-slate-700 hover:border-amber-400 p-3 rounded-xl text-left transition flex justify-between items-center">
+          <div>
+            <p class="font-semibold text-sm">706 Diamond</p>
+            <p class="text-amber-400 text-xs font-bold mt-1">Rp 160.000</p>
+          </div>
+          <i class="fa-solid fa-gem text-amber-400"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 3: Pilih Pembayaran -->
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-lg">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-amber-500 text-slate-950 font-bold w-7 h-7 rounded-full flex items-center justify-center text-sm">3</span>
+        <h2 class="text-lg font-bold">Pilih Pembayaran</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <button onclick="selectPayment(this, 'QRIS')" class="pay-btn bg-slate-800 border border-slate-700 hover:border-amber-400 p-3 rounded-xl text-center transition">
+          <p class="font-semibold text-sm">QRIS All Payment</p>
+        </button>
+        <button onclick="selectPayment(this, 'DANA')" class="pay-btn bg-slate-800 border border-slate-700 hover:border-amber-400 p-3 rounded-xl text-center transition">
+          <p class="font-semibold text-sm">DANA</p>
+        </button>
+        <button onclick="selectPayment(this, 'GoPay')" class="pay-btn bg-slate-800 border border-slate-700 hover:border-amber-400 p-3 rounded-xl text-center transition">
+          <p class="font-semibold text-sm">GoPay</p>
+        </button>
+        <button onclick="selectPayment(this, 'ShopeePay')" class="pay-btn bg-slate-800 border border-slate-700 hover:border-amber-400 p-3 rounded-xl text-center transition">
+          <p class="font-semibold text-sm">ShopeePay</p>
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 4: Kontak WhatsApp -->
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-lg">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-amber-500 text-slate-950 font-bold w-7 h-7 rounded-full flex items-center justify-center text-sm">4</span>
+        <h2 class="text-lg font-bold">Nomor WhatsApp</h2>
+      </div>
+      <input type="number" id="waNumber" placeholder="08xxxxxxxxxx" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-amber-400 transition">
+      <p class="text-xs text-slate-400 mt-2">*Bukti pembayaran akan dikirim via WhatsApp.</p>
+    </div>
+
+    <!-- Submit Button -->
+    <button onclick="processOrder()" class="w-full bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-slate-950 font-extrabold py-3.5 rounded-xl shadow-lg shadow-amber-500/20 text-center text-base transition">
+      <i class="fa-solid fa-cart-shopping mr-2"></i> Beli Sekarang
+    </button>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+    <p>&copy; 2026 <span class="text-amber-400 font-semibold">King Alex Store</span>. All rights reserved.</p>
+  </footer>
+
+  <!-- Simple JavaScript Logic -->
+  <script>
+    let selectedPackage = "";
+    let selectedPrice = "";
+    let selectedMethod = "";
+
+    function selectItem(element, pkg, price) {
+      document.querySelectorAll('.item-btn').forEach(btn => {
+        btn.classList.remove('border-amber-500', 'bg-slate-800/80');
+      });
+      element.classList.add('border-amber-500', 'bg-slate-800/80');
+      selectedPackage = pkg;
+      selectedPrice = price;
+    }
+
+    function selectPayment(element, method) {
+      document.querySelectorAll('.pay-btn').forEach(btn => {
+        btn.classList.remove('border-amber-500', 'bg-slate-800/80');
+      });
+      element.classList.add('border-amber-500', 'bg-slate-800/80');
+      selectedMethod = method;
+    }
+
+    function processOrder() {
+      const userId = document.getElementById('userId').value;
+      const zoneId = document.getElementById('zoneId').value;
+      const waNumber = document.getElementById('waNumber').value;
+
+      if (!userId || !zoneId) {
+        alert('Mohon isi User ID dan Zone ID Anda!');
+        return;
+      }
+      if (!selectedPackage) {
+        alert('Mohon pilih nominal Diamond!');
+        return;
+      }
+      if (!selectedMethod) {
+        alert('Mohon pilih Metode Pembayaran!');
+        return;
+      }
+      if (!waNumber) {
+        alert('Mohon masukkan Nomor WhatsApp!');
+        return;
+      }
+
+      // Contoh: Mengarahkan transaksi langsung ke WhatsApp Admin
+      const adminWA = "6285741843263"; // GANTI DENGAN NOMOR WA ANDA
+      const message = `Halo King Alex Store,%0A%0ASaya ingin membeli Diamond Mobile Legends:%0A- ID: ${userId} (${zoneId})%0A- Paket: ${selectedPackage}%0A- Harga: ${selectedPrice}%0A- Pembayaran via: ${selectedMethod}%0A- No WA: ${waNumber}%0A%0AMohon diproses kak!`;
+a
+      window.open(`https://wa.me/${adminWA}?text=${message}`, '_blank');
+    }
+  </script>
+</body>
+</html>
